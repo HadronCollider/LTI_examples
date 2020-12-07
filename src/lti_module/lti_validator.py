@@ -20,7 +20,7 @@ class LTIRequestValidator(RequestValidator):
         return False
 
     def get_client_secret(self, client_key, request):
-        return  get_secret(client_key)
+        return get_secret(client_key)
 
     def validate_client_key(self, client_key, request):
         return is_key_valid(client_key)
@@ -29,8 +29,10 @@ class LTIRequestValidator(RequestValidator):
         if not has_timestamp_and_nonce(client_key, timestamp, nonce):
             # добавляем (timestamp, nonce) в данные клиента
             add_timestamp_and_nonce(client_key, timestamp, nonce)
+            print('timestamp and nonce are valid!')
             return True
         else:
+            print('timestamp and nonce are invalid!')
             return False
 
     def dummy_client(self):
