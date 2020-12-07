@@ -29,10 +29,8 @@ class LTIRequestValidator(RequestValidator):
         if not has_timestamp_and_nonce(client_key, timestamp, nonce):
             # добавляем (timestamp, nonce) в данные клиента
             add_timestamp_and_nonce(client_key, timestamp, nonce)
-            print('timestamp and nonce are valid!')
             return True
         else:
-            print('timestamp and nonce are invalid!')
             return False
 
     def dummy_client(self):

@@ -28,7 +28,6 @@ def get_person_name(data): return get_param(data, PERSON_NAME)
 
 def get_role(data, default_role=False):
     try:
-        print(get_param(data, ROLES), get_param(data, ROLES).split(',')[0] == ADMIN_ROLE)
         return get_param(data, ROLES).split(',')[0] == ADMIN_ROLE
     except:
         return default_role
