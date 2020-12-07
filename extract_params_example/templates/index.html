@@ -1,0 +1,8 @@
+<h1>Welcome to External tool, {{person_name}}!</h1>
+
+<h3>
+Ваш ID: {{username}} {{role}} ({{'Вы - преподаватель' if role == 'True'  else 'Вы - не преподаватель'}})<br>
+Вы прибыли из курса: {{course_title}}<br>
+Пользовательские параметры запроса: <pre>{{custom_params}}</pre>
+Вернуться в курс можно по ссылке: <a href="{{return_url}}">Назад к курсу</a><br>
+</h3>
