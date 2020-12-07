@@ -1,4 +1,4 @@
-from flask import Flask, request, make_response, render_template, url_for, redirect
+from flask import Flask, abort, request, make_response, render_template, url_for, redirect
 from lti_module.check_request import check_request
 from lti_module import utils
 from db import get_secret
