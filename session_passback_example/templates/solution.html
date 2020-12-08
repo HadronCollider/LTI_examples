@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<b>Solution_id</b>: {{solution_id}}<br>
+<b>Task_id</b>: {{solution['task_id']}}<br>
+<b>Username</b>: {{solution['login']}}<br>
+<b>Score</b>: {{solution['score']}}<br>
+<b>Is_passbacked</b>: {{solution['is_passbacked']}}<br>
+<b>Passback_params</b>: <pre style="white-space:pre-wrap;">{{solution['passback_params']}}</pre><br>
+
+{% endblock %}

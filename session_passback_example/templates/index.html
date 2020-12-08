@@ -1,5 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>Welcome to External tool, {{session['session_id']}}!</h1>
 
 <h3>
 Task: {{task_id}}
+
+    <form action="/{{task_id}}/send/solution/">
+        Your answer: <input type="text" name="answer" value="3"></p>
+        <p><input type="submit"></p>
+    </form>
 </h3>
+
+{% endblock %}
